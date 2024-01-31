@@ -1,5 +1,3 @@
-// Addition of two Numbers (Write a program to add two numbers)
-
 package com.example.twosum;
 
 import android.os.Bundle;
@@ -12,34 +10,31 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
-    EditText firstNumber;
-    EditText secondNumber;
-    TextView addResult;
-    Button btnAdd;
-    double num1, num2, sum;
+    EditText txt1;
+    EditText txt2;
+    TextView tv;
+    Button bt;
+
+    Float a, b, c;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        firstNumber = (EditText) findViewById(R.id.txtNumber1);
-        secondNumber = (EditText) findViewById(R.id.txtNumber2);
-        addResult = (TextView) findViewById(R.id.txtResult);
-        btnAdd = (Button) findViewById(R.id.btnAdd);
-        btnAdd.setOnClickListener(new OnClickListener() {
+
+        txt1 = (EditText) findViewById(R.id.txtNumber1);
+        txt2 = (EditText) findViewById(R.id.txtNumber2);
+        tv = (TextView) findViewById(R.id.txtResult);
+        bt = (Button) findViewById(R.id.btnAdd);
+
+        bt.setOnClickListener(new OnClickListener() {
+
             public void onClick(View v) {
-                num1 = Double.parseDouble(firstNumber.getText().toString());
-                num2 = Double.parseDouble(secondNumber.getText().toString());
-                sum = num1 + num2;
-                addResult.setText(Double.toString(sum));
+                a = Float.parseFloata(firstNumber.getText().toString());
+                b = Float.parseFloat(secondNumber.getText().toString());
+                c = a + b;
+                addResult.setText(Float.toString(c));
             }
         });
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
     }
 }
