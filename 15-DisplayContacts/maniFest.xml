@@ -1,0 +1,3 @@
+<!-- Write a Program to display contacts using Grid View Control -->
+
+<uses-permission  android:name="android.permission.READ_CONTACTS"/>
