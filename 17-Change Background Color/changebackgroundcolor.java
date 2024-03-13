@@ -1,3 +1,5 @@
+// Write a program to Change the Background colour of the Activity
+
 package com.gems.pqr;
 
 import android.os.Bundle;
